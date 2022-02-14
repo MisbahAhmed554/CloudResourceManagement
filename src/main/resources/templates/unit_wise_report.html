@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<div th:replace="header:: myheader"> </div>
+</head>
+<br>
+
+<h2><a class="navbar-brand"  style="color:brown; font-weight:bold; font-size:25px" href="#" th:href="@{/}">Unit Wise Resource Utilization</a></h2>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- for view -->
+<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 1;
+		/* Sit on top */
+		padding-top: 100px;
+		/* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%;
+		/* Full width */
+		height: 100%;
+		/* Full height */
+		overflow: auto;
+		/* Enable scroll if needed */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4);
+		/* Black w/ opacity */
+	}
+
+
+
+	/* Modal Content */
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	}
+
+	/*.table {
+    display: flex;
+}
+
+.column {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.row {
+    border: 1px black solid;
+    height: 3em;
+    margin: auto;
+    width: 100%;
+}*/
+	/* The Close Button */
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+</style>
+</head>
+
+
+<br>
+<br>
+<br>
+
+
+<table border="1" class="table table-striped table-responsive-md" style="width:90%">
+	<thead>
+		<tr>
+			<th>
+				<a th:href="@{'/page/' + ${currentPage} + '?sortField=techmDept&sortDir=' + ${reverseSortDir}}">
+					TechmDept</a>
+			</th>
+			<th>
+				<a th:href="@{'/page/' + ${currentPage} + '?sortField=sumUnit&sortDir=' + ${reverseSortDir}}">
+					Month to Date Spending(USD)</a>
+			</th>
+
+
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<tr th:each="cloudresource : ${listCloudResourcesUnitWise}">
+			<td th:text="${cloudresource.techmDept}"></td>
+			<td th:text="${cloudresource.sumUnit}"></td>
+
+
+			<td>
+				<!-- Trigger/Open The Modal -->
+				<button id="myBtn">View</button>
+				<!--<a th:href="@{/showFormForView}" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+-->
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+
+
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2> </h2>
+						</div>
+
+
+						<div class="modal-body">
+							<div class="table">
+   
+
+
+							<table border="1" class = "table table-striped table-responsive-md">
+<thead>
+<tr>
+
+
+
+
+
+<th>
+<a th:href="@{'/page/' + ${currentPage} + '?sortField=techmDept&sortDir=' + ${reverseSortDir}}">
+TechmDept</a>
+</th>
+
+
+
+
+<th>
+<a th:href="@{'/page/' + ${currentPage} + '?sortField=resourceCost&sortDir=' + ${reverseSortDir}}">
+Month to Date Spending(USD) (Detailed Breakup)</a>
+</th>
+
+
+
+
+
+</tr>
+</thead>
+<tbody>
+		<tr th:each="cloudresource : ${listUnitWiseView}">
+
+
+
+			<td th:text="${cloudresource.techmDept}"></td>
+
+
+
+			<td th:text="${cloudresource.resourceCost}"></td>
+			<!--<div class="modal-footer">
+				<h3>Footer</h3>
+			</div>
+			</div>
+
+
+
+			</div>-->
+		</tr>
+</tbody>
+							</table>
+
+
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById("myModal");
+
+
+
+				// Get the button that opens the modal
+				var btn = document.getElementById("myBtn");
+
+
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+
+
+				// When the user clicks the button, open the modal
+				btn.onclick = function () {
+					modal.style.display = "block";
+				}
+
+
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function () {
+					modal.style.display = "none";
+				}
+
+
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function (event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+
+
+
+			</td>
+		</tr>
+		</div>
+
+		</td>
+		</tr>
+
+	</tbody>
+</table>
+</div>
+</td>
+
+</tr>
+</tbody>
+</table>
+<div th:if="${totalPages > 1}">
+	<div class="row col-sm-10">
+		<div class="col-sm-2">
+			Total Rows: [[${totalItems}]]
+		</div>
+		<div class="col-sm-1">
+			<span th:each="i: ${#numbers.sequence(1, totalPages)}">
+				<a th:if="${currentPage != i}"
+					th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+				<span th:unless="${currentPage != i}">[[${i}]]</span> &nbsp; &nbsp;
+			</span>
+		</div>
+		<div class="col-sm-1">
+			<a th:if="${currentPage < totalPages}"
+				th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+			<span th:unless="${currentPage < totalPages}">Next</span>
+		</div>
+		<div class="col-sm-1">
+			<a th:if="${currentPage < totalPages}"
+				th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+			<span th:unless="${currentPage < totalPages}">Last</span>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -32,7 +32,11 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User save(UserRegistrationDto registrationDto) {
+<<<<<<< HEAD
+		User user = new User(registrationDto.getFirstName(),registrationDto.getContactNo(), 
+=======
 		User user = new User(registrationDto.getFirstName(), 
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 				registrationDto.getLastName(), registrationDto.getEmail(),
 				passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new Role("ROLE_USER")));
 		

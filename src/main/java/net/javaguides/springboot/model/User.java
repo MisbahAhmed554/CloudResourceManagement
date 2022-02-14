@@ -29,6 +29,14 @@ public class User {
 	@Column(name = "last_name")
 	private String lastName;
 	
+<<<<<<< HEAD
+	@Column(name = "contact_no")
+	private String contactNo;
+	
+	
+	
+=======
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 	private String email;
 	
 	private String password;
@@ -47,12 +55,20 @@ public class User {
 		
 	}
 	
+<<<<<<< HEAD
+	public User(String firstName,String contactNo, String lastName, String email, String password, Collection<Role> roles) {
+=======
 	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+<<<<<<< HEAD
+		this.contactNo = contactNo;
+=======
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 		this.roles = roles;
 	}
 	public Long getId() {
@@ -85,6 +101,20 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+<<<<<<< HEAD
+	
+	
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+	
+	
+=======
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 	public Collection<Role> getRoles() {
 		return roles;
 	}

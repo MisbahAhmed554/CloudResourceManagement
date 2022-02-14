@@ -2,6 +2,9 @@ Manifest-Version: 1.0
 Build-Jdk-Spec: 17
 Implementation-Title: employee-management-webapp
 Implementation-Version: 0.0.1-SNAPSHOT
+<<<<<<< HEAD
+=======
 Implementation-Vendor: Pivotal Software, Inc.
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
 Created-By: Maven Integration for Eclipse
 

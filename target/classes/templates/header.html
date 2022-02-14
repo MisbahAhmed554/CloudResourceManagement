@@ -1,0 +1,237 @@
+<html>
+
+<head>
+	<div th:fragment="myheader">
+		<meta charset="ISO-8859-1">
+		<title>Tech Mahindra IBM Enterprise Cloud-Resource Management</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- create navigation bar ( header) -->
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+						class="icon-bar" ></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style= "color:white; font-weight:bold;  font-size:20px"  >Tech Mahindra IBM Enterprise Cloud-Resource
+					Management</a>
+					<a class="navbar-brand" style="color:white; font-weight:bold; font-size:18px">&nbsp;&nbsp;WELCOME ADMIN	</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse" >
+						<ul class="nav navbar-nav" >
+					<li sec:authorize="isAuthenticated()"> <a style="color: white; font-weight:bold; font-size:20px" th:href="@{/logout}">
+							<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							WELCOME ADMIN-->
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Logout </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<class="container my-2">
+		<div style="margin-left:14%">
+			<style>
+				body {
+					font-family:"Lato", sans-serif";
+				}
+
+				.sidenav {
+					height: 100%;
+					width: 160px;
+					position: fixed;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					background-color:#D4EFDF;
+					overflow-x: hidden;
+					padding-top: 20px;
+				}
+
+				.sidenav a {
+					padding: 6px 8px 6px 16px;
+					text-decoration: none;
+					font-size: 25px;
+					color: #111;
+					display: block;
+				}
+
+				.sidenav a:hover {
+					color: blue;
+				}
+
+				.sidenav a:active {
+					color: red;
+				}
+
+				.main {
+					margin-left: 160px;
+					/* Same as the width of the sidenav */
+					font-size: 28px;
+					/* Increased text to enable scrolling */
+					padding: 0px 10px;
+				}
+
+				@media screen and (max-height: 450px) {
+					.sidenav {
+						padding-top: 15px;
+					}
+
+					.sidenav a {
+						font-size: 18px;
+					}
+				}
+			</style>
+			</head>
+
+
+			<style>
+				body {
+					font-family:"Lato", sans-serif;
+					font-size:16px;
+					/*font-family: "Lato", sans-serif;*/
+				}
+
+				/* Style the sidenav links and the dropdown button */
+				.sidenav a,
+				.dropdown-btn {
+					padding: 6px 8px 6px 16px;
+					text-decoration: none;
+					font-size: 20px;
+					color: black;
+					display: black;
+					border: white;
+					background: none;
+					width: 100%;
+					text-align: left;
+					cursor: pointer;
+					outline: none;
+				}
+
+				/* On mouse-over */
+				.sidenav a:hover,
+				.dropdown-btn:hover {
+					color: brown;
+				}
+
+				/* Main content */
+				.main {
+					margin-left: 200px;
+					/* Same as the width of the sidenav */
+					font-size: 20px;
+					/* Increased text to enable scrolling */
+					padding: 0px 10px;
+				}
+
+				/* Add an active class to the active dropdown button */
+				.active {
+					background-color:#5DADE2 ;
+					color: white;
+				}
+
+				/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+				.dropdown-container {
+					display: none;
+					background-color: #FDEBD0 ;
+					padding-left: 8px;
+				}
+
+				hr.new {
+					border-top: 1px solid black;
+				}
+
+				/* Optional: Style the caret down icon */
+				.fa-caret-down {
+					float: right;
+					padding-right: 8px;
+				}
+
+				/* Some media queries for responsiveness */
+				@media screen and (max-height: 450px) {
+					.sidenav {
+						padding-top: 15px;
+					}
+
+					.sidenav a {
+						font-size: 18px;
+					}
+				}
+			</style>
+			<style>
+				.arrow {
+					border: solid black;
+					border-width: 0 3px 3px 0;
+					display: inline-block;
+					padding: 3px;
+				}
+
+				.down {
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+				}
+			</style>
+			</head>
+
+			<body>
+				<!--
+<p>Right arrow: <i class="arrow right"></i></p>
+<p>Left arrow: <i class="arrow left"></i></p>
+<p>Up arrow: <i class="arrow up"></i></p>
+<p>Down arrow: <i class="arrow down"></i></p>-->
+
+				<div class="sidenav">
+					<br>
+					<a href="#contact"></a>
+					<br>
+					<font face=""Lato", sans-serif" size="5"><button class="dropdown-btn">
+							<p>Reports &nbsp;<i class="arrow down"></i></font>
+					</p>
+					<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+					<font face=""Lato", sans-serif" size="6">	<a href="/UnitWiseResourceUtilization">Unit Wise Resource Utilization</a></h5>
+						</font>
+						<font face=""Lato", sans-serif" size="6"><a href="CloudResourceWiseUtilization">Cloud Resource Wise Utilization</a></font>
+
+					</div>
+					<br>
+					<hr class="new">
+					<br>
+					<font face=""Lato", sans-serif" size="5"><button class="dropdown-btn">
+							<p>Manage &nbsp;<i class="arrow down"></i></font>
+					</p>
+					<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-container">
+					<font face=""Lato", sans-serif" size="6"><a href="/">Cloud Resource Utilization Details</a></h5>
+						</font>
+					</div>
+					<!--<a*href="#contact">Search</a>-->
+				</div>
+
+				<script>
+					/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+					var dropdown = document.getElementsByClassName("dropdown-btn");
+					var i; for (i = 0; i < dropdown.length; i++) {
+						dropdown[i].addEventListener("click", function () {
+							this.classList.toggle("active");
+							var dropdownContent = this.nextElementSibling;
+							if (dropdownContent.style.display === "block") {
+								dropdownContent.style.display = "none";
+							} else {
+								dropdownContent.style.display = "block";
+							}
+						});
+					}
+				</script>
+			</body>
+
+</html>

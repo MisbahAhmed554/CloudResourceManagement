@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\service\UserServiceImpl.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\model\CloudResource.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\model\UnitWiseReport.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\controller\UserRegistrationController.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\model\Role.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\model\User.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\repository\CloudResourceRepository.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\CloudResourceManagementWebappApplication.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\repository\UserRepository.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\service\UserService.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\service\CloudResourceService.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\model\Unitwise.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\controller\CloudResourceController.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\dto\UserRegistrationDto.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\service\CloudResourceServiceImpl.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\controller\MainController.java
+C:\Users\KB00781015\Documents\workspace-spring-tool-suite-4-4.13.0.RELEASE\cloud-resource-management\src\main\java\net\javaguides\springboot\config\SecurityConfiguration.java
+=======
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\model\User.java
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\config\SecurityConfiguration.java
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\service\UserServiceImpl.java
@@ -13,3 +32,4 @@ D:\spring project\employee-management-webapp-main\employee-management-webapp-mai
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\model\Employee.java
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\repository\EmployeeRepository.java
 D:\spring project\employee-management-webapp-main\employee-management-webapp-main\src\main\java\net\javaguides\springboot\controller\MainController.java
+>>>>>>> de673a181aaa950f8165b243a12240a51ce250fa
